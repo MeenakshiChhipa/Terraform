@@ -1,0 +1,28 @@
+Creating EC2 with Terraform :
+
+I have created one instance on AWS EC2 and installed Terraform on that after that
+
+This commands I have used
+
+mkdir test
+
+vi demo.tf  : I have write this content
+
+provider "aws" {
+  access_key = "Access Key"
+  secret_key = "Secrey Key"
+  region     = "us-east-1"
+}
+resource "aws_instance" "example" {
+  ami           = "ami-2757f631"
+  instance_type = "t2.micro"
+}
+
+after that I have use the Terraform commands
+
+terraform init
+terraform plan
+terraform apply
+
+
+so the new EC2 instance is created using terraform.
