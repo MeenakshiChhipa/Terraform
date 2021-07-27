@@ -1,3 +1,3 @@
 output "bucket-name" {
-  value = aws_s3_bucket.bucket-name
+  value = "${module.s3_bucket.bucket-name}"
 }
